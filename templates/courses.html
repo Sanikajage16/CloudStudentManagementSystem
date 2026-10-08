@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses | Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>📚 My Courses</h1>
+
+<div class="table-container">
+
+<table>
+        <tr>
+            <th>ID</th>
+            <th>Course</th>
+            <th>Instructor</th>
+            <th>Credits</th>
+        </tr>
+
+        {% for course in courses %}
+
+        <tr>
+            <td>{{ course[0] }}</td>
+            <td>{{ course[1] }}</td>
+            <td>{{ course[2] }}</td>
+            <td>{{ course[3] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/dashboard" class="btn">⬅ Back to Dashboard</a>
+
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile | Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<div class="profile-box">
+
+<h1>👤 Student Profile</h1>
+
+<p><strong>ID:</strong> {{ user[0] }}</p>
+
+<p><strong>Name:</strong> {{ user[1] }}</p>
+
+<p><strong>Email:</strong> {{ user[2] }}</p>
+
+<p><strong>Status:</strong> Active Student</p>
+
+<br>
+
+<a href="/dashboard" class="btn">⬅ Back to Dashboard</a>
+
+</div>
+
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>

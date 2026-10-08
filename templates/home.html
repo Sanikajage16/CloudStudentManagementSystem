@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Cloud Student Management System</h1>
+    <h2>Welcome</h2>
+
+    <div style="display:flex; justify-content:center; margin-top:40px;">
+
+        <div class="card" style="width:400px; text-align:center;">
+
+            <h3>Student Portal</h3>
+
+            <p>
+                Register if you are a new student<br>
+                or login to access your dashboard.
+            </p>
+
+            <br>
+
+            <a href="/register" class="btn">Register</a>
+            <a href="/login" class="btn">Login</a>
+
+        </div>
+
+    </div>
+
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>

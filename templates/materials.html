@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Materials | Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="table-container">
+<table>
+<h1>📂 Study Materials</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Subject</th>
+    <th>Material Name</th>
+    <th>Type</th>
+    <th>Uploaded On</th>
+</tr>
+
+{% for row in materials %}
+
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>{{ row[4] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+</div>
+<br>
+
+<div style="text-align:center;">
+    <a href="/dashboard" class="btn">⬅ Back to Dashboard</a>
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>

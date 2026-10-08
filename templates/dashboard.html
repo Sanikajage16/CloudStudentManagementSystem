@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">
+        🎓 Cloud Student System
+    </div>
+
+    <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/courses">Courses</a>
+        <a href="/assignments">Assignments</a>
+        <a href="/attendance">Attendance</a>
+        <a href="/materials">Materials</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+</div>
+
+<div class="container">
+
+<h1>👋 Welcome, {{ name }}</h1>
+
+<p style="text-align:center;font-size:20px;color:#555;">
+Manage your courses, assignments, attendance and study materials from one place.
+</p>
+
+<div class="stats">
+
+    <div class="stat-card">
+        <h2>📚</h2>
+        <h3>{{ total_courses }}</h3>
+        <p>Courses</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>📝</h2>
+        <h3>{{ total_assignments }}</h3>
+        <p>Assignments</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>📅</h2>
+        <h3>{{ avg_attendance }}%</h3>
+        <p>Attendance</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>📂</h2>
+        <h3>{{ total_materials }}</h3>
+        <p>Materials</p>
+    </div>
+
+</div>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>📚 Courses</h3>
+<p>View all enrolled courses.</p>
+<a href="/courses" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h3>📝 Assignments</h3>
+<p>Check pending assignments.</p>
+<a href="/assignments" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h3>📅 Attendance</h3>
+<p>Track your attendance.</p>
+<a href="/attendance" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h3>📂 Materials</h3>
+<p>Study resources.</p>
+<a href="/materials" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h3>👤 Profile</h3>
+<p>View your profile.</p>
+<a href="/profile" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h3>🚪 Logout</h3>
+<p>Logout safely.</p>
+<a href="/logout" class="btn">Logout</a>
+</div>
+
+</div>
+<h2 style="margin-top:40px; text-align:center;">Quick Actions</h2>
+
+<div class="quick-actions">
+    <a href="/courses" class="btn">📚 View Courses</a>
+    <a href="/assignments" class="btn">📝 Assignments</a>
+    <a href="/attendance" class="btn">📅 Attendance</a>
+    <a href="/materials" class="btn">📂 Study Materials</a>
+</div>
+
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>

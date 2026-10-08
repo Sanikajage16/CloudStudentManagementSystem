@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="login-box">
+
+        <h1>Student Registration</h1>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="fullname"
+                placeholder="Enter Full Name"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                required>
+
+            <button type="submit" class="btn">
+                Register
+            </button>
+
+        </form>
+
+        <p>
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+        <a href="/" class="btn">Back to Home</a>
+
+    </div>
+
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>

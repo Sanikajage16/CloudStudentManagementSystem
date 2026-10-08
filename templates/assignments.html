@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignments | Cloud Student Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Assignments</h1>
+
+<div class="table-container">
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Subject</th>
+    <th>Assignment</th>
+    <th>Due Date</th>
+    <th>Status</th>
+</tr>
+
+{% for assignment in assignments %}
+
+<tr>
+    <td>{{ assignment[0] }}</td>
+    <td>{{ assignment[1] }}</td>
+    <td>{{ assignment[2] }}</td>
+    <td>{{ assignment[3] }}</td>
+    <td>{{ assignment[4] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+</div>
+
+<br>
+
+<a href="/dashboard" class="btn">
+⬅ Back to Dashboard
+</a>
+
+</div>
+<footer class="footer">
+    <p>© 2026 Cloud Student Management System | Developed by Sanika Jage</p>
+</footer>
+</body>
+</html>
