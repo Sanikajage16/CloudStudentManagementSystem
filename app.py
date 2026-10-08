@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 import mysql.connector
+import os
 
 app = Flask(__name__)
 app.secret_key = "cloudtask-secret-key"
@@ -7,11 +8,13 @@ app.secret_key = "cloudtask-secret-key"
 # ==========================
 # Database Connection
 # ==========================
+
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Root@123",
-    database="cloudtaskdb"
+    host=os.getenv("MYSQLHOST"),
+    port=int(os.getenv("MYSQLPORT")),
+    user=os.getenv("MYSQLUSER"),
+    password=os.getenv("MYSQLPASSWORD"),
+    database=os.getenv("MYSQLDATABASE")
 )
 
 cursor = db.cursor()
