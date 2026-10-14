@@ -2,6 +2,11 @@ from flask import Flask, render_template, request, redirect, session
 import mysql.connector
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 app = Flask(__name__)
 app.secret_key = "cloudtask-secret-key"
 
