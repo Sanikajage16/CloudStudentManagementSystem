@@ -10,6 +10,11 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = "cloudtask-secret-key"
 
+print("HOST:", os.getenv("MYSQLHOST"))
+print("PORT:", os.getenv("MYSQLPORT"))
+print("USER:", os.getenv("MYSQLUSER"))
+print("DATABASE:", os.getenv("MYSQLDATABASE"))
+
 # ==========================
 # Database Connection
 # ==========================
